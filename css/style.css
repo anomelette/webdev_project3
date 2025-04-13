@@ -182,6 +182,11 @@ section.cats {
   text-align: center;
 }
 
+/* Google Maps */
+  #map {
+    height: 50em;
+    width: 60%;
+  }
 
 /* Small Screens (max-width: 768px) */
 @media (max-width: 768px) {
