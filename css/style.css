@@ -184,8 +184,9 @@ section.cats {
 
 /* Google Maps */
   #map {
-    height: 50em;
-    width: 60%;
+    height: 35em;
+    width: 70%;
+    margin: 0 auto;
   }
 
 /* Small Screens (max-width: 768px) */
