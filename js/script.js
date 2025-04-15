@@ -24,15 +24,15 @@ marker.addListener("click", () => {
 
 /* Image Slider */
 document.addEventListener('DOMContentLoaded', function () {
-  const slider = new Swiper('.slider', {
+  const swiper = new Swiper('.swiper', {
     loop: true,
     pagination: {
-      el: '.slider-sequence',
+      el: '.swiper-pagination',
       clickable: true,
     },
     navigation: {
-      nextEl: '.slider-button-next',
-      prevEl: '.slider-button-prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     autoplay: {
       delay: 3000,
