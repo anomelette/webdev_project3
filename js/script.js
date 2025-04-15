@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Google Maps
-let map;
-function initMap() {
+window.initMap = function () {
   // Create map
   map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: -34.397, lng: 150.644 },
@@ -50,5 +49,5 @@ function initMap() {
   marker.addListener("click", () => {
     infoWindow.open(map, marker);
   });
-}
+};
 
