@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Google Maps
-window.initMap = function () {
+let map;
+
+function initMap() {
   // Create map
   map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: -34.397, lng: 150.644 },
@@ -32,14 +34,17 @@ window.initMap = function () {
     title: "Hello World!",
   });
 
-  // Feature 2: Street View
-  const panorama = new google.maps.StreetViewPanorama(
-    document.getElementById('map'), {
-      position: { lat: -34.397, lng: 150.644 },
-      pov: { heading: 165, pitch: 0 }
-    }
-  );
-  map.setStreetView(panorama);
+// Feature 2: Circle around the marker
+  const circle = new google.maps.Circle({
+    strokeColor: "#4a4e69",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#9a8c98",
+    fillOpacity: 0.35,
+    map,
+    center: { lat: -34.397, lng: 150.644 },
+    radius: 5000 // in meters (5km)
+  });
 
   // Feature 3: Info Window
   const infoWindow = new google.maps.InfoWindow({
@@ -49,5 +54,6 @@ window.initMap = function () {
   marker.addListener("click", () => {
     infoWindow.open(map, marker);
   });
-};
+}
 
+initMap();
