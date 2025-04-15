@@ -203,51 +203,47 @@ section.cats {
   object-fit: cover;
 }
 
-/* Small Screens (max-width: 768px) */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    text-align: center;
+/* Small Screens */
+@media (min-width: 480px) {
+  .resume {
+    padding: 1.5rem;
+    width: 90%;
   }
 
-  nav ul {
-    flex-direction: column;
+  .resume p, .resume li {
+    font-size: 1rem;
   }
 
-  nav li {
-    margin-bottom: 10px;
-  }
-
-  .resume-layout {
-    flex-direction: column;
-    align-items: center;
+  .resume-layout > * {
+    margin-bottom: 1rem;
   }
 
   #resume {
-    padding: 0 10px;
-  }
-
-  .resume {
-    width: 100%;
-    padding: 15px;
+    margin: 20px auto;
   }
 }
 
-/* Medium Screens (min-width: 768px) and up */
+/* Medium Screens */
 @media (min-width: 768px) {
-  nav {
-    padding: 15px 20px;
-  }
-  
   .resume-layout {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .resume-layout > * {
+    flex: 1;
   }
 
   .resume {
     width: 85%;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
   }
 
-  #leadership {
-    width: 100%;
+  #resume {
+    max-width: 1000px;
   }
 }
