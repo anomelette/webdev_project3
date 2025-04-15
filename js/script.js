@@ -55,4 +55,4 @@ function initMap() {
   });
 }
 
-initMap();
+//initMap();
