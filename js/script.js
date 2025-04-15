@@ -1,5 +1,24 @@
 /* Image Slider */
-document.addEventListener('DOMContentLoaded', function () {
+//document.addEventListener('DOMContentLoaded', function () {
+//  const swiper = new Swiper('.swiper', {
+//    loop: true,
+//    pagination: {
+//      el: '.swiper-pagination',
+//      clickable: true,
+//    },
+//    navigation: {
+//      nextEl: '.swiper-button-next',
+//      prevEl: '.swiper-button-prev',
+//    },
+//    autoplay: {
+//      delay: 3000,
+//      disableOnInteraction: false,
+//    },
+//  });
+//});
+
+
+window.onload = function () {
   const swiper = new Swiper('.swiper', {
     loop: true,
     pagination: {
@@ -15,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
       disableOnInteraction: false,
     },
   });
-});
+};
 
 // Google Maps
 let map;
