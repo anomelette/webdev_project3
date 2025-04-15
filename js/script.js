@@ -1,6 +1,3 @@
-
-
-
 /*Google Maps Features*/
 /*Feature 1*/
 new google.maps.Marker({
@@ -23,4 +20,23 @@ const infoWindow = new google.maps.InfoWindow({
 });
 marker.addListener("click", () => {
   infoWindow.open(map, marker);
+});
+
+/* Image Slider */
+document.addEventListener('DOMContentLoaded', function () {
+  const slider = new Swiper('.slider', {
+    loop: true,
+    pagination: {
+      el: '.slider-sequence',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
 });
