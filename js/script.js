@@ -24,13 +24,13 @@ let map;
 function initMap() {
   // Create map
   map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: -34.397, lng: 150.644 },
+    center: { lat: -34.7, lng: 150.644 },
     zoom: 8
   });
 
   // Feature 1: Marker
   const marker = new google.maps.Marker({
-    position: { lat: -34.397, lng: 150.644 },
+    position: { lat: -34.7, lng: 150.644 },
     map,
     title: "Hello World!",
   });
@@ -49,7 +49,7 @@ function initMap() {
 
   // Feature 3: Info Window
   const infoWindow = new google.maps.InfoWindow({
-    content: "<h2>My Location</h2><p>This is a cool spot.</p>"
+    content: "<h1>The Ocean</h1><p>Fish live here!</p>"
   });
 
   marker.addListener("click", () => {
