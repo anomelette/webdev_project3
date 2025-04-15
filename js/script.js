@@ -1,3 +1,22 @@
+/* Image Slider */
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+});
+
 /*Google Maps Features*/
 /*Feature 1*/
 new google.maps.Marker({
@@ -22,21 +41,3 @@ marker.addListener("click", () => {
   infoWindow.open(map, marker);
 });
 
-/* Image Slider */
-document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-  });
-});
