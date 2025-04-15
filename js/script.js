@@ -17,18 +17,16 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
 // Google Maps
 let map;
 
 function initMap() {
-  // Create map
   map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: -34.397, lng: 150.644 },
     zoom: 8
   });
 
-  // Feature 1: Marker
+  // Feature 1: Marker in the ocean
   const marker = new google.maps.Marker({
     position: { lat: -34.397, lng: 151.644 },
     map,
@@ -47,7 +45,7 @@ function initMap() {
     radius: 5000 // in meters (5km)
   });
 
-  // Feature 3: Info Window
+  // Feature 3: Info window -- pops up when marker is clicked
   const infoWindow = new google.maps.InfoWindow({
     content: "<h2>The Ocean</h2><p>Fish live here!</p>"
   });
