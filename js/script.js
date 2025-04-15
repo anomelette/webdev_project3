@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
 // Google Maps
 let map;
 
