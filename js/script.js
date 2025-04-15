@@ -24,13 +24,13 @@ let map;
 function initMap() {
   // Create map
   map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: -34.7, lng: 150.644 },
+    center: { lat: -34.397, lng: 150.644 },
     zoom: 8
   });
 
   // Feature 1: Marker
   const marker = new google.maps.Marker({
-    position: { lat: -34.7, lng: 150.644 },
+    position: { lat: -34.397, lng: 151.644 },
     map,
     title: "Hello World!",
   });
@@ -43,13 +43,13 @@ function initMap() {
     fillColor: "#9a8c98",
     fillOpacity: 0.35,
     map,
-    center: { lat: -34.397, lng: 150.644 },
+    center: { lat: -34.397, lng: 151.644 },
     radius: 5000 // in meters (5km)
   });
 
   // Feature 3: Info Window
   const infoWindow = new google.maps.InfoWindow({
-    content: "<h1>The Ocean</h1><p>Fish live here!</p>"
+    content: "<h2>The Ocean</h2><p>Fish live here!</p>"
   });
 
   marker.addListener("click", () => {
